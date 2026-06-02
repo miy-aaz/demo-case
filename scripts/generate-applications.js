@@ -7,6 +7,8 @@ const generateApplication = () => {
     let application = {}
     application.id = faker.number.int({min: 123456, max: 999999})
 
+    application.sentDate = faker.date.recent({days: 21})
+
     application.personalDetails = {}
     application.personalDetails.firstName = faker.person.firstName()
     application.personalDetails.lastName = faker.person.lastName()
