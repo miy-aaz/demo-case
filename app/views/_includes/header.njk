@@ -11,7 +11,6 @@
 
 
 {{ govukHeader({
-  homepageUrl: "#",
   productName: serviceName,
   serviceUrl: "/",
   containerClasses: "govuk-width-container"
@@ -19,7 +18,7 @@
 
 {{ govukServiceNavigation({
   serviceName: serviceName,
-  serviceUrl: "/",
+  serviceUrl: serviceUrl,
   navigation: [{
     href: '/account/sign-out',
     text: 'Sign out'

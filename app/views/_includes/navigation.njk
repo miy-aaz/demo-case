@@ -1,0 +1,13 @@
+{{ govukServiceNavigation({
+  serviceName: serviceName,
+  serviceUrl: serviceUrl,
+  navigation: [{
+    href: '/applications',
+    text: 'Applications',
+    current: navId == 'applications'
+  },
+  {
+    href: '/activity',
+    text: 'Activity'
+  }] 
+}) if data.user }} 
