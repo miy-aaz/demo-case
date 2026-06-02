@@ -17,10 +17,32 @@ const generateApplication = () => {
         town: 'London',
         postcode: 'W9 1ST'
     }
-    //experience
 
+    application.experience = {}
+    application.experience.numberOfBalls = faker.helpers.arrayElement([
+        '3 or more',
+        '1 or 2'
+    ])
+    application.experience.trick = faker.lorem.paragraphs(2, '\n\n ')
     //evidence
+    application.evidence = {}
+    application.evidence.hasEvidence = faker.helpers.arrayElement([
+        'Yes',
+        'No'
+    ])
 
+    if(application.evidence.hasEvidence == 'Yes') {
+        application.evidence.files = [{
+            name: 'trick-performance.mp4',
+            size: '5MB'
+        }, {
+            name: 'juggling-show.mp4',
+            size: '32MB'
+        }, {
+            name: 'testimonial.mp3',
+            size: '2MB'
+        }]
+    }
 
     return application 
 }
